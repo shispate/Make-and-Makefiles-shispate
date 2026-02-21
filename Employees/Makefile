@@ -22,7 +22,7 @@ all: $(TARGET)
 $(TARGET): $(OBJS) 
 	$(CC) $(OBJS) -o $(TARGET)
 
-# combines each object file
+# compiles each object file
 main.o: main.cpp
 	$(CC) $(CFLAGS) main.cpp
 
@@ -37,4 +37,5 @@ Supervisor.o: Supervisor.cpp Supervisor.h
 
 # removes all objects (*.o), Emacs backup (*~), and target.
 clean:
+
 	rm -f *.o *~ $(TARGET)
